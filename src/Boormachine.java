@@ -1,10 +1,16 @@
 public class Boormachine extends Product{
     //Instance variabelen
-    final private String merk;
-    final private String type;
+    private String merk;
+    private String type;
 
 
     //Constructor
+    public Boormachine (){
+        super(0, 0, false);
+        this.merk = "";
+        this.type = "";
+    }
+
     public Boormachine (String merk, String type, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
         super(huurprijsPerDag, verzekeringPerDag, verhuurd);
         this.merk = merk;
@@ -31,6 +37,14 @@ public class Boormachine extends Product{
     public boolean getVerhuurd() { return super.getVerhuurd(); }
 
     //Set methoden
+
+    public void setMerk(String merk) {
+        this.merk = merk;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public void setHuurprijsPerDag(double huurprijsPerDag) {
         super.setHuurprijsPerDag(huurprijsPerDag);

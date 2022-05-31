@@ -1,10 +1,15 @@
 public class Personenauto extends Product{
     //Instance variabelen
-    final private String merk;
-    final private int gewicht;
+    private String merk;
+    private int gewicht;
 
 
-    //Constructor
+    //Constructors
+    public Personenauto(){
+        super(0, 0, false);
+        this.merk = "";
+        this.gewicht = 0;
+    }
     public Personenauto (String merk, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
         super(huurprijsPerDag, verzekeringPerDag, verhuurd);
         this.merk = merk;
@@ -31,6 +36,13 @@ public class Personenauto extends Product{
     public boolean getVerhuurd() { return super.getVerhuurd(); }
 
     //Set methoden
+    public void setMerk(String merk) {
+        this.merk = merk;
+    }
+
+    public void setGewicht(int gewicht) {
+        this.gewicht = gewicht;
+    }
 
     public void setHuurprijsPerDag(double huurprijsPerDag) {
         super.setHuurprijsPerDag(huurprijsPerDag);

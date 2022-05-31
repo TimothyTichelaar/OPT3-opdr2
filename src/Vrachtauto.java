@@ -1,10 +1,16 @@
 public class Vrachtauto extends Product{
     //Instance variabelen
-    final private int laadvermogen;
-    final private int gewicht;
+    private int laadvermogen;
+    private int gewicht;
 
 
     //Constructor
+    public Vrachtauto(){
+        super(0, 0, false);
+        this.laadvermogen = 0;
+        this.gewicht = 0;
+    }
+
     public Vrachtauto (int laadvermogen, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
         super(huurprijsPerDag, verzekeringPerDag, verhuurd);
         this.laadvermogen = laadvermogen;
@@ -31,6 +37,14 @@ public class Vrachtauto extends Product{
     public boolean getVerhuurd() { return super.getVerhuurd(); }
 
     //Set methoden
+
+    public void setLaadvermogen(int laadvermogen) {
+        this.laadvermogen = laadvermogen;
+    }
+
+    public void setGewicht(int gewicht) {
+        this.gewicht = gewicht;
+    }
 
     public void setHuurprijsPerDag(double huurprijsPerDag) {
         super.setHuurprijsPerDag(huurprijsPerDag);
