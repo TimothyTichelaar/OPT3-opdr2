@@ -1,7 +1,7 @@
 public class Personenauto extends Product{
     //Instance variabelen
     final private String merk;
-    private int gewicht;
+    final private int gewicht;
 
 
     //Constructor
@@ -31,10 +31,6 @@ public class Personenauto extends Product{
     public boolean getVerhuurd() { return super.getVerhuurd(); }
 
     //Set methoden
-
-    public void setGewicht(int gewicht) {
-        this.gewicht = gewicht;
-    }
 
     public void setHuurprijsPerDag(double huurprijsPerDag) {
         super.setHuurprijsPerDag(huurprijsPerDag);
