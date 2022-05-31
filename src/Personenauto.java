@@ -1,20 +1,14 @@
-public class Personenauto implements Product{
+public class Personenauto extends Product{
     //Instance variabelen
-    final private double standaardHuur = 50;
-    final private double standaardVerzekering = 0.01;
     final private String merk;
     private int gewicht;
-    private double huurprijsPerDag;
-    private double verzekeringPerDag;
-    private boolean verhuurd;
+
 
     //Constructor
-    public Personenauto (String merk, int gewicht) {
+    public Personenauto (String merk, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
+        super(huurprijsPerDag, verzekeringPerDag, verhuurd);
         this.merk = merk;
         this.gewicht = gewicht;
-        this.huurprijsPerDag = this.standaardHuur;
-        this.verzekeringPerDag = this.standaardVerzekering * gewicht;
-        this.verhuurd = false;
     }
 
     //Get methoden
@@ -27,14 +21,14 @@ public class Personenauto implements Product{
     }
 
     public double getHuurprijsPerDag() {
-        return this.huurprijsPerDag;
+        return super.getHuurprijsPerDag();
     }
 
     public double getVerzekeringPerDag() {
-        return this.verzekeringPerDag;
+        return super.getVerzekeringPerDag();
     }
 
-    public boolean getVerhuurd() { return this.verhuurd; }
+    public boolean getVerhuurd() { return super.getVerhuurd(); }
 
     //Set methoden
 
@@ -43,15 +37,15 @@ public class Personenauto implements Product{
     }
 
     public void setHuurprijsPerDag(double huurprijsPerDag) {
-        this.huurprijsPerDag = huurprijsPerDag;
+        super.setHuurprijsPerDag(huurprijsPerDag);
     }
 
     public void setVerzekeringPerDag(double verzekeringPerDag) {
-        this.verzekeringPerDag = verzekeringPerDag;
+        super.setVerzekeringPerDag(verzekeringPerDag);
     }
 
     public void setVerhuurd(boolean verhuren) {
-        this.verhuurd = verhuren;
+        super.setVerhuurd(verhuren);
     }
 
     //Interface methoden
