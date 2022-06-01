@@ -6,13 +6,17 @@ public class Boormachine extends Product{
 
     //Constructor
     public Boormachine (){
-        super(0, 0, false);
+        this.huurprijsPerDag = 0;
+        this.verzekeringPerDag = 0;
+        this.verhuurd = false;
         this.merk = "";
         this.type = "";
     }
 
     public Boormachine (String merk, String type, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
-        super(huurprijsPerDag, verzekeringPerDag, verhuurd);
+        this.huurprijsPerDag = huurprijsPerDag;
+        this.verzekeringPerDag = verzekeringPerDag;
+        this.verhuurd = verhuurd;
         this.merk = merk;
         this.type = type;
     }
@@ -27,14 +31,14 @@ public class Boormachine extends Product{
     }
 
     public double getHuurprijsPerDag() {
-        return super.getHuurprijsPerDag();
+        return this.huurprijsPerDag;
     }
 
     public double getVerzekeringPerDag() {
-        return super.getVerzekeringPerDag();
+        return this.verzekeringPerDag;
     }
 
-    public boolean getVerhuurd() { return super.getVerhuurd(); }
+    public boolean getVerhuurd() { return this.verhuurd; }
 
     //Set methoden
 
@@ -47,15 +51,15 @@ public class Boormachine extends Product{
     }
 
     public void setHuurprijsPerDag(double huurprijsPerDag) {
-        super.setHuurprijsPerDag(huurprijsPerDag);
+        this.huurprijsPerDag = huurprijsPerDag;
     }
 
     public void setVerzekeringPerDag(double verzekeringPerDag) {
-        super.setVerzekeringPerDag(verzekeringPerDag);
+        this.verzekeringPerDag = verzekeringPerDag;
     }
 
     public void setVerhuurd(boolean verhuren) {
-        super.setVerhuurd(verhuren);
+        this.verhuurd = verhuren;
     }
 
     //Interface methoden

@@ -6,12 +6,16 @@ public class Personenauto extends Product{
 
     //Constructors
     public Personenauto(){
-        super(0, 0, false);
+        this.huurprijsPerDag = 0;
+        this.verzekeringPerDag = 0;
+        this.verhuurd = false;
         this.merk = "";
         this.gewicht = 0;
     }
     public Personenauto (String merk, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
-        super(huurprijsPerDag, verzekeringPerDag, verhuurd);
+        this.huurprijsPerDag = huurprijsPerDag;
+        this.verzekeringPerDag = verzekeringPerDag;
+        this.verhuurd = verhuurd;
         this.merk = merk;
         this.gewicht = gewicht;
     }
@@ -26,14 +30,14 @@ public class Personenauto extends Product{
     }
 
     public double getHuurprijsPerDag() {
-        return super.getHuurprijsPerDag();
+        return this.huurprijsPerDag;
     }
 
     public double getVerzekeringPerDag() {
-        return super.getVerzekeringPerDag();
+        return this.verzekeringPerDag;
     }
 
-    public boolean getVerhuurd() { return super.getVerhuurd(); }
+    public boolean getVerhuurd() { return this.verhuurd; }
 
     //Set methoden
     public void setMerk(String merk) {
@@ -45,15 +49,15 @@ public class Personenauto extends Product{
     }
 
     public void setHuurprijsPerDag(double huurprijsPerDag) {
-        super.setHuurprijsPerDag(huurprijsPerDag);
+        this.huurprijsPerDag = huurprijsPerDag;
     }
 
     public void setVerzekeringPerDag(double verzekeringPerDag) {
-        super.setVerzekeringPerDag(verzekeringPerDag);
+        this.verzekeringPerDag = verzekeringPerDag;
     }
 
     public void setVerhuurd(boolean verhuren) {
-        super.setVerhuurd(verhuren);
+        this.verhuurd = verhuren;
     }
 
     //Interface methoden
