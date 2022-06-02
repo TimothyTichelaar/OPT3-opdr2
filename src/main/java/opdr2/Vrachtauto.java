@@ -1,33 +1,35 @@
-public class Boormachine extends Product{
+package opdr2;
+
+public class Vrachtauto extends Product{
     //Instance variabelen
-    private String merk;
-    private String type;
+    private int laadvermogen;
+    private int gewicht;
 
 
     //Constructor
-    public Boormachine (){
+    public Vrachtauto(){
         this.huurprijsPerDag = 0;
         this.verzekeringPerDag = 0;
         this.verhuurd = false;
-        this.merk = "";
-        this.type = "";
+        this.laadvermogen = 0;
+        this.gewicht = 0;
     }
 
-    public Boormachine (String merk, String type, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
+    public Vrachtauto (int laadvermogen, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
         this.huurprijsPerDag = huurprijsPerDag;
         this.verzekeringPerDag = verzekeringPerDag;
         this.verhuurd = verhuurd;
-        this.merk = merk;
-        this.type = type;
+        this.laadvermogen = laadvermogen;
+        this.gewicht = gewicht;
     }
 
     //Get methoden
-    public String getMerk () {
-        return this.merk;
+    public int getLaadvermogen () {
+        return this.laadvermogen;
     }
 
-    public String getType () {
-        return this.type;
+    public int getGewicht () {
+        return this.gewicht;
     }
 
     public double getHuurprijsPerDag() {
@@ -42,12 +44,12 @@ public class Boormachine extends Product{
 
     //Set methoden
 
-    public void setMerk(String merk) {
-        this.merk = merk;
+    public void setLaadvermogen(int laadvermogen) {
+        this.laadvermogen = laadvermogen;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setGewicht(int gewicht) {
+        this.gewicht = gewicht;
     }
 
     public void setHuurprijsPerDag(double huurprijsPerDag) {

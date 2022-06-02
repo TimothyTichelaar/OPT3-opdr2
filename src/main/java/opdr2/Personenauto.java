@@ -1,29 +1,30 @@
-public class Vrachtauto extends Product{
+package opdr2;
+
+public class Personenauto extends Product{
     //Instance variabelen
-    private int laadvermogen;
+    private String merk;
     private int gewicht;
 
 
-    //Constructor
-    public Vrachtauto(){
+    //Constructors
+    public Personenauto(){
         this.huurprijsPerDag = 0;
         this.verzekeringPerDag = 0;
         this.verhuurd = false;
-        this.laadvermogen = 0;
+        this.merk = "";
         this.gewicht = 0;
     }
-
-    public Vrachtauto (int laadvermogen, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
+    public Personenauto (String merk, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
         this.huurprijsPerDag = huurprijsPerDag;
         this.verzekeringPerDag = verzekeringPerDag;
         this.verhuurd = verhuurd;
-        this.laadvermogen = laadvermogen;
+        this.merk = merk;
         this.gewicht = gewicht;
     }
 
     //Get methoden
-    public int getLaadvermogen () {
-        return this.laadvermogen;
+    public String getMerk () {
+        return this.merk;
     }
 
     public int getGewicht () {
@@ -41,9 +42,8 @@ public class Vrachtauto extends Product{
     public boolean getVerhuurd() { return this.verhuurd; }
 
     //Set methoden
-
-    public void setLaadvermogen(int laadvermogen) {
-        this.laadvermogen = laadvermogen;
+    public void setMerk(String merk) {
+        this.merk = merk;
     }
 
     public void setGewicht(int gewicht) {

@@ -1,3 +1,5 @@
+package opdr2;
+
 public abstract class Product {
     //-----Instance variabelen-----
     public double huurprijsPerDag;
