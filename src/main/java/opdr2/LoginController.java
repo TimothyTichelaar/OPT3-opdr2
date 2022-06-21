@@ -20,9 +20,9 @@ public class LoginController extends SceneController {
 
     @FXML private Label foutmeldingLabel;
 
-    final private LoginApplication login;
+    //final private LoginApplication login;
 
-    private final List<String> ingelogd = new ArrayList();
+    //private final List<String> ingelogd = new ArrayList();
 
     public LoginController(){
         this(null);
@@ -30,21 +30,20 @@ public class LoginController extends SceneController {
 
     public LoginController (LoginApplication login)
     {
-        this.login = login;
-        foutmeldingLabel.setVisible(false);
+        //this.login = login;
+        //foutmeldingLabel.setVisible(false);
     }
 
     @Override
     public void handle (ActionEvent actionEvent)
     {
         String inlogCode = code.getText();
-        if(PersonenOpslag.checkInlog(inlogCode, wachtwoord.getText())){
-            ingelogd.add(inlogCode);
+        Medewerker medewerker = PersonenOpslag.getMedewerker(inlogCode);
+        if(PersonenOpslag.checkInlog(inlogCode, wachtwoord.getText()) && !SceneController.checkIngelogd(medewerker)){
+            SceneController.ingelogd.add(medewerker);
             Stage stage = new Stage();
-            new MenuApplication (stage, PersonenOpslag.getMedewerker(inlogCode));
+            new MenuApplication (medewerker);
             foutmeldingLabel.setVisible(false);
-
-            stage.setOnCloseRequest( e -> ingelogd.remove(inlogCode));
         }else{
             foutmeldingLabel.setVisible(true);
         }

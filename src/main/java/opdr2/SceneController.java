@@ -9,12 +9,22 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public abstract class SceneController implements EventHandler<ActionEvent> {
+    public static List<Medewerker> ingelogd = new ArrayList();
+
     public Medewerker medewerker;
 
+
+
     public void setMedewerker(Medewerker newMedewerker){this.medewerker = newMedewerker;}
+
+    public static boolean checkIngelogd(Medewerker medewerker){
+        return ingelogd.contains(medewerker);
+    }
 
     @Override
     public void handle(ActionEvent event) {

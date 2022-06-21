@@ -16,6 +16,7 @@ public class MenuController extends SceneController {
     public javafx.scene.control.Button uitloggen;
 
     public void closeButtonAction(ActionEvent actionEvent){
+        SceneController.ingelogd.remove(medewerker);
         Stage stage = (Stage) uitloggen.getScene().getWindow();
         stage.close();
     }
