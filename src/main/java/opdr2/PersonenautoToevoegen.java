@@ -6,10 +6,13 @@ public class PersonenautoToevoegen extends ItemToevoegen{
         super();
     }
 
-
-
     @Override
     public Product addProduct() {
         return ProductFactory.PERSONENAUTO_FACTORY.maakProduct();
+    }
+
+    @Override
+    public void setInformatie1(Product product) {
+        //product.set
     }
 }

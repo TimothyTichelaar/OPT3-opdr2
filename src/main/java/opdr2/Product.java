@@ -44,6 +44,10 @@ public abstract class Product {
         this.verhuurd = verhuurd;
     }
 
+    public abstract void setInformatie1(String info1);
+
+    public abstract void setInformatie2(String info2);
+
     //-----Overige methoden-----
     abstract double prijsPerDag(boolean verzekering);
 }
