@@ -33,9 +33,9 @@ public class ToevoegenController extends SceneController{
     private void itemAanmaken () {
         if(productsoort.equals("Personenauto")){
             item = ProductFactory.PERSONENAUTO_FACTORY.maakProduct();
-        }else if(productsoort.equals("Vrachtauto")){
+        }if(productsoort.equals("Vrachtauto")){
             item = ProductFactory.VRACHTAUTO_FACTORY.maakProduct();
-        }else if(productsoort.equals("Boormachine")){
+        }if(productsoort.equals("Boormachine")){
             item = ProductFactory.BOORMACHINE_FACTORY.maakProduct();
         }
         info1Label.setText(item.uniekeInfo1);
