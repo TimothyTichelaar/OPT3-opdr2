@@ -48,12 +48,14 @@ public class DetailController extends SceneController {
             reserveren.getChildren().setAll((Node) loader.load());
             GereserveerdController controller = loader.getController();
             controller.setProduct(this.product);
+            controller.setMedewerker(this.medewerker);
 
         }else{
             loader.setLocation(Objects.requireNonNull(getClass().getResource("reserveren.fxml")));
             reserveren.getChildren().setAll((Node) loader.load());
             ReserverenController controller = loader.getController();
             controller.setProduct(this.product);
+            controller.setMedewerker(this.medewerker);
         }
     }
 }

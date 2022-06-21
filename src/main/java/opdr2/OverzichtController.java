@@ -52,28 +52,26 @@ public class OverzichtController extends SceneController {
     }
 
     public void clickItem(MouseEvent event) {
-        producten.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                Product product = producten.getItems().get(producten.getSelectionModel().getSelectedCells().get(0).getRow());
-                String stageName = "detail";
-                Parent root = null;
-                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(OverzichtController.class.getResource(stageName + "-view.fxml")));
-                try {
-                    root = loader.load();
-                    DetailController controller = loader.getController();
-                    controller.setProduct(product);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root);
-                String scherm = stageName.substring(0,1).toUpperCase() + stageName.substring(1);
-                stage.setTitle("Rent-a-Thing // " + scherm + "        " +  medewerker.getNaam());
-                stage.setScene(scene);
-                stage.show();
-            }
-        });
+        Product product = producten.getItems().get(producten.getSelectionModel().getSelectedCells().get(0).getRow());
+        String stageName = "detail";
+        Parent root = null;
+        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(OverzichtController.class.getResource(stageName + "-view.fxml")));
+        DetailController controller;
+        try {
+            root = loader.load();
+            controller = loader.getController();
+            controller.setMedewerker(this.medewerker);
+            controller.setProduct(product);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        String scherm = stageName.substring(0,1).toUpperCase() + stageName.substring(1);
+        stage.setTitle("Rent-a-Thing // " + scherm + "        " +  this.medewerker.getNaam());
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
