@@ -2,9 +2,9 @@ package opdr2;
 
 public class ProductInformatie {
 
-    public String naam;
-    public double huurprijsPerDag;
-    public double verzekeringPerDag;
+    private String naam;
+    private double huurprijsPerDag;
+    private double verzekeringPerDag;
 
     public ProductInformatie (String naam, double huurprijsPerDag, double verzekeringPerDag) {
         this.naam = naam;

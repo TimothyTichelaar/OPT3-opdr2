@@ -8,17 +8,16 @@ public class Personenauto extends Product{
 
     //Constructors
     public Personenauto(){
-        this("", 0, 0, 0, false);
+        this("", 0, null);
     }
 
-    public Personenauto (String merk, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
-        this.naam = "Personenauto";
-        this.huurprijsPerDag = huurprijsPerDag;
-        this.verzekeringPerDag = verzekeringPerDag;
-        this.verhuurd = verhuurd;
+    public Personenauto (String merk, int gewicht, ProductInformatie productInformatie) {
         this.merk = merk;
         this.gewicht = gewicht;
+        this.uniekeInfo1 = "merk";
+        this.uniekeInfo2 = "gewicht";
         this.beschrijving = "Een personenauto van het merk " + merk + ". Het heeft een gewicht van " + gewicht + "kg.";
+        this.productInformatie = productInformatie;
         this.verhuurInformatie = null;
     }
 
@@ -30,6 +29,8 @@ public class Personenauto extends Product{
     public int getGewicht () {
         return this.gewicht;
     }
+
+    public String getBeschrijving(){return this.beschrijving;}
 
     //Set methoden
     public void setMerk(String merk) {
@@ -51,8 +52,8 @@ public class Personenauto extends Product{
     @Override
     public double prijsPerDag (boolean verzekering) {
         if(verzekering){
-            return this.huurprijsPerDag + this.verzekeringPerDag;
+            return productInformatie.getHuurprijsPerDag() + productInformatie.getVerzekeringPerDag();
         }
-        return this.huurprijsPerDag;
+        return productInformatie.getHuurprijsPerDag() ;
     }
 }

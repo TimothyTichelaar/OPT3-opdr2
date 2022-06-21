@@ -8,6 +8,7 @@ public abstract class Product {
     public String uniekeInfo1;
     public String uniekeInfo2;
     public String beschrijving;
+    public boolean verhuurd;
 
     //-----Constructor-----
 
@@ -20,6 +21,14 @@ public abstract class Product {
 
     public VerhuurInformatie getVerhuur(){return this.verhuurInformatie;};
 
+    public boolean getVerhuurd() {
+        return verhuurd;
+    }
+
+    public abstract String getBeschrijving();
+
+    public String getNaam(){return productInformatie.getNaam();}
+
     //-----Set methoden-----
 
     public void setProductInformatie(ProductInformatie productInformatie) {
@@ -28,6 +37,11 @@ public abstract class Product {
 
     public void setVerhuurInformatie(VerhuurInformatie verhuurInformatie) {
         this.verhuurInformatie = verhuurInformatie;
+        setVerhuurd(verhuurInformatie != null);
+    }
+
+    public void setVerhuurd(boolean verhuurd) {
+        this.verhuurd = verhuurd;
     }
 
     //-----Overige methoden-----

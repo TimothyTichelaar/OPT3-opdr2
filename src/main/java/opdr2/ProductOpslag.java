@@ -15,12 +15,17 @@ public abstract class ProductOpslag {
         productSoorten.add("Vrachtauto");
         productSoorten.add("Boormachine");
 
-        producten.add(new Personenauto());
-        producten.add(new Personenauto("bmw", 1500, 50, 5, false));
-        Product audi = new Personenauto("audi", 1700, 30, 4, true);
+        //producten.add(new Personenauto());
+        ProductInformatie auto1 = new ProductInformatie("Personenauto BMW", 50, 5);
+        producten.add(new Personenauto("BMW", 1500, auto1));
+
+        ProductInformatie auto2 = new ProductInformatie("Personenauto Audi", 30, 4);
+        Product audi = new Personenauto("Audi", 1700, auto2);
         audi.setVerhuurInformatie(new VerhuurInformatie(PersonenOpslag.getMedewerkers().get(0), new Klant("Noah Albin"), true));
         producten.add(audi);
-        producten.add(new Personenauto("volkswagen", 1300, 45, 5, false));
+
+        ProductInformatie auto3 = new ProductInformatie("Personenauto Volkswagen", 45, 5);
+        producten.add(new Personenauto("volkswagen", 1300, auto3));
     }
 
     public static void addProduct(){

@@ -8,17 +8,14 @@ public class Vrachtauto extends Product{
 
     //Constructor
     public Vrachtauto(){
-        this(0, 0, 0, 0, false);
+        this(0, 0, null);
     }
 
-    public Vrachtauto (int laadvermogen, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
-        this.naam = "Vrachtauto";
-        this.huurprijsPerDag = huurprijsPerDag;
-        this.verzekeringPerDag = verzekeringPerDag;
-        this.verhuurd = verhuurd;
+    public Vrachtauto (int laadvermogen, int gewicht, ProductInformatie productInformatie) {
         this.laadvermogen = laadvermogen;
         this.gewicht = gewicht;
         this.beschrijving = "Een vrachtauto met " + laadvermogen + "kg laadvermogen. Het heeft een gewicht van " + gewicht + "kg.";
+        this.productInformatie = productInformatie;
         this.verhuurInformatie = null;
     }
 
@@ -30,6 +27,8 @@ public class Vrachtauto extends Product{
     public int getGewicht () {
         return this.gewicht;
     }
+
+    public String getBeschrijving(){return this.beschrijving;}
 
     //Set methoden
 

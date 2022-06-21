@@ -30,6 +30,8 @@ public class Boormachine extends Product{
         return this.type;
     }
 
+    public String getBeschrijving(){return this.beschrijving;}
+
     //Set methoden
 
     public void setMerk(String merk) {

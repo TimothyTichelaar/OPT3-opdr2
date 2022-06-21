@@ -36,14 +36,14 @@ public class DetailController extends SceneController {
 //        setReserveren();
 //    }
 
-    private void setTitel(){this.titel.setText(this.product.getNaam());}
+    private void setTitel(){this.titel.setText(this.product.getProductInformatie().getNaam());}
 
     private void setBeschrijving(){this.beschrijving.setText(this.product.getBeschrijving());}
 
     private void setReserveren() throws IOException {
         //String fxml = "reserveren.fxml";
         FXMLLoader loader = new FXMLLoader();
-        if(this.product.getVerhuurd()){
+        if(this.product.getVerhuur() != null){
             loader.setLocation(Objects.requireNonNull(getClass().getResource("gereserveerd.fxml")));
             reserveren.getChildren().setAll((Node) loader.load());
             GereserveerdController controller = loader.getController();
