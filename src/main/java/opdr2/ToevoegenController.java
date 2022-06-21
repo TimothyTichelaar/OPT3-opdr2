@@ -52,6 +52,7 @@ public class ToevoegenController extends SceneController{
         item.setProductInformatie(productInformatie);
         item.setInformatie1(info1);
         item.setInformatie2(info2);
+        ProductOpslag.addProduct(item);
     }
 
     @Override

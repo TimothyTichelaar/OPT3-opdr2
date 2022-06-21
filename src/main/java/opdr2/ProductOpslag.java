@@ -28,8 +28,8 @@ public abstract class ProductOpslag {
         producten.add(new Personenauto("volkswagen", 1300, auto3));
     }
 
-    public static void addProduct(){
-        producten.add(ProductFactory.PERSONENAUTO_FACTORY.maakProduct());
+    public static void addProduct(Product product){
+        producten.add(product);
     }
 
     public static List<Product> getProducten(){
