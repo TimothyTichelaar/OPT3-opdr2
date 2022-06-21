@@ -4,13 +4,9 @@ public class PersonenautoToevoegen extends ItemToevoegen{
 
     public PersonenautoToevoegen(){
         super();
-        getProductInformatie(addProduct());
     }
 
-    @Override
-    public void getProductInformatie(Product product) {
 
-    }
 
     @Override
     public Product addProduct() {

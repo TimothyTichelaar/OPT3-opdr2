@@ -4,34 +4,35 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opdr2.ToevoegenController">
+<AnchorPane prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opdr2.ToevoegenController">
    <children>
-      <Button layoutX="67.0" layoutY="440.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="730.0" text="Button" />
-      <TextField editable="false" layoutX="67.0" layoutY="53.0" prefHeight="44.0" prefWidth="161.0" text="Product:">
+      <Button id="beheer" fx:id="toevoegen" layoutX="67.0" layoutY="440.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="730.0" text="Toevoegen" />
+      <Label fx:id="info1Label" layoutX="67.0" layoutY="121.0" prefHeight="44.0" prefWidth="161.0" text="Info1:">
          <font>
             <Font size="20.0" />
-         </font></TextField>
-      <TextField editable="false" layoutX="67.0" layoutY="121.0" prefHeight="44.0" prefWidth="161.0" text="Info1:">
+         </font></Label>
+      <Label fx:id="info2Label" layoutX="67.0" layoutY="194.0" prefHeight="44.0" prefWidth="161.0" text="Info2:">
          <font>
             <Font size="20.0" />
-         </font></TextField>
-      <TextField editable="false" layoutX="67.0" layoutY="194.0" prefHeight="44.0" prefWidth="161.0" text="Info2:">
+         </font></Label>
+      <Label layoutX="67.0" layoutY="269.0" prefHeight="44.0" prefWidth="161.0" text="Dagprijs:">
          <font>
             <Font size="20.0" />
-         </font></TextField>
-      <TextField editable="false" layoutX="67.0" layoutY="269.0" prefHeight="44.0" prefWidth="161.0" text="Dagprijs:">
-         <font>
-            <Font size="20.0" />
-         </font></TextField>
-      <TextField layoutX="67.0" layoutY="338.0" prefHeight="44.0" prefWidth="161.0" text="Verzekering:">
+         </font></Label>
+      <Label layoutX="67.0" layoutY="338.0" prefHeight="44.0" prefWidth="161.0" text="Verzekering:">
          <font>
             <Font size="20.0" />
          </font>
-      </TextField>
-      <TextField id="product" layoutX="282.0" layoutY="53.0" prefHeight="44.0" prefWidth="515.0" />
-      <TextField id="info1" layoutX="282.0" layoutY="121.0" prefHeight="44.0" prefWidth="515.0" />
-      <TextField id="info2" layoutX="282.0" layoutY="194.0" prefHeight="44.0" prefWidth="515.0" />
-      <TextField id="dagprijs" layoutX="282.0" layoutY="269.0" prefHeight="44.0" prefWidth="515.0" />
-      <TextField id="verzekering" layoutX="282.0" layoutY="338.0" prefHeight="44.0" prefWidth="515.0" />
+      </Label>
+      <TextField id="product" fx:id="productField" layoutX="282.0" layoutY="53.0" prefHeight="44.0" prefWidth="515.0" />
+      <TextField id="info1" fx:id="info1Field" layoutX="282.0" layoutY="121.0" prefHeight="44.0" prefWidth="515.0" />
+      <TextField id="info2" fx:id="info2field" layoutX="282.0" layoutY="194.0" prefHeight="44.0" prefWidth="515.0" />
+      <TextField id="dagprijs" fx:id="dagprijsField" layoutX="282.0" layoutY="269.0" prefHeight="44.0" prefWidth="515.0" />
+      <TextField id="verzekering" fx:id="verzekeringField" layoutX="282.0" layoutY="338.0" prefHeight="44.0" prefWidth="515.0" />
+      <Label layoutX="67.0" layoutY="53.0" prefHeight="44.0" prefWidth="161.0" text="Product:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

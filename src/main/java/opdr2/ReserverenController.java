@@ -42,7 +42,6 @@ public class ReserverenController extends SceneController {
 
     @Override
     public void handle(ActionEvent event) {
-        this.product.setVerhuurd(true);
         this.product.setVerhuurInformatie(new VerhuurInformatie(medewerker, new Klant(klant.getText()), verzekering.isSelected()));
         Observable.update();
         super.handle(event);

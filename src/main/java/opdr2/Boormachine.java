@@ -8,23 +8,16 @@ public class Boormachine extends Product{
 
     //Constructor
     public Boormachine (){
-        this.naam = "Boormachine";
-        this.huurprijsPerDag = 0;
-        this.verzekeringPerDag = 0;
-        this.verhuurd = false;
-        this.merk = "";
-        this.type = "";
-        this.verhuurInformatie = null;
+        this("", "", null);
     }
 
-    public Boormachine (String merk, String type, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
-        this.naam = "Boormachine";
-        this.huurprijsPerDag = huurprijsPerDag;
-        this.verzekeringPerDag = verzekeringPerDag;
-        this.verhuurd = verhuurd;
+    public Boormachine (String merk, String type, ProductInformatie productInfo) {
         this.merk = merk;
         this.type = type;
+        this.uniekeInfo1 = "merk";
+        this.uniekeInfo2 = "type";
         this.beschrijving = "Een boormachine van het merk " + merk + ". Het is de  " + type + " uitvoering.";
+        this.productInformatie = productInfo;
         this.verhuurInformatie = null;
     }
 
