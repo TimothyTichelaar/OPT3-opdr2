@@ -11,18 +11,17 @@ import java.io.IOException;
 public class MenuApplication extends Stage {
 
     private LoginApplication login;
-    private Medewerker medewerker;
     private Pane rootPane;
     public MenuApplication (LoginApplication login, Medewerker medewerker) {
-        this.medewerker = medewerker;
         FXMLLoader parent = new FXMLLoader(MenuApplication.class.getResource("menu-view.fxml"));
-        //parent.getController().
         Scene scene = null;
         try {
             scene = new Scene(parent.load(), 850, 550);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        SceneController controller = parent.getController();
+        controller.setMedewerker(medewerker);
 
         Stage stage = new Stage();
         stage.setTitle("Rent-a-Thing // Menu        " + medewerker.getNaam());

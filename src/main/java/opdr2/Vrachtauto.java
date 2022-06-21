@@ -8,21 +8,18 @@ public class Vrachtauto extends Product{
 
     //Constructor
     public Vrachtauto(){
-        this.huurprijsPerDag = 0;
-        this.verzekeringPerDag = 0;
-        this.verhuurd = false;
-        this.laadvermogen = 0;
-        this.gewicht = 0;
-        this.verhuur = null;
+        this(0, 0, 0, 0, false);
     }
 
     public Vrachtauto (int laadvermogen, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
+        this.naam = "Vrachtauto";
         this.huurprijsPerDag = huurprijsPerDag;
         this.verzekeringPerDag = verzekeringPerDag;
         this.verhuurd = verhuurd;
         this.laadvermogen = laadvermogen;
         this.gewicht = gewicht;
-        this.verhuur = null;
+        this.beschrijving = "Een vrachtauto met " + laadvermogen + "kg laadvermogen. Het heeft een gewicht van " + gewicht + "kg.";
+        this.verhuurInformatie = null;
     }
 
     //Get methoden
@@ -34,51 +31,22 @@ public class Vrachtauto extends Product{
         return this.gewicht;
     }
 
-    public double getHuurprijsPerDag() {
-        return this.huurprijsPerDag;
-    }
-
-    public double getVerzekeringPerDag() {
-        return this.verzekeringPerDag;
-    }
-
-    public boolean getVerhuurd() { return this.verhuurd; }
-
-    public VerhuurInformatie getVerhuur() {return this.verhuur;}
-
     //Set methoden
 
     public void setLaadvermogen(int laadvermogen) {
         this.laadvermogen = laadvermogen;
+        setBeschrijving();
     }
 
     public void setGewicht(int gewicht) {
         this.gewicht = gewicht;
+        setBeschrijving();
     }
 
-    public void setHuurprijsPerDag(double huurprijsPerDag) {
-        this.huurprijsPerDag = huurprijsPerDag;
+    private void setBeschrijving(){
+        this.beschrijving = "Een vrachtauto met " + this.laadvermogen + "kg laadvermogen. Het heeft een gewicht van " + this.gewicht + "kg.";
     }
 
-    public void setVerzekeringPerDag(double verzekeringPerDag) {
-        this.verzekeringPerDag = verzekeringPerDag;
-    }
-
-    public void setVerhuurd(boolean verhuren) {
-        this.verhuurd = verhuren;
-    }
-
-    @Override
-    public String getNaam() {
-        return this.naam;
-    }
-
-    @Override
-    public String getBeschrijving() {
-        return this.beschrijving;
-    }
-
-    public void setVerhuur(VerhuurInformatie verhuur){this.verhuur = verhuur;}
 
     //Interface methoden
     @Override

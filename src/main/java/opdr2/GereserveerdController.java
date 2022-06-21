@@ -31,7 +31,7 @@ public class GereserveerdController extends SceneController {
     @Override
     public void handle(ActionEvent event) {
         this.product.setVerhuurd(false);
-        this.product.setVerhuur(null);
+        this.product.setVerhuurInformatie(null);
         Observable.update();
         super.handle(event);
     }

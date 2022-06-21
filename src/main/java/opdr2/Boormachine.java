@@ -8,21 +8,24 @@ public class Boormachine extends Product{
 
     //Constructor
     public Boormachine (){
+        this.naam = "Boormachine";
         this.huurprijsPerDag = 0;
         this.verzekeringPerDag = 0;
         this.verhuurd = false;
         this.merk = "";
         this.type = "";
-        this.verhuur = null;
+        this.verhuurInformatie = null;
     }
 
     public Boormachine (String merk, String type, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
+        this.naam = "Boormachine";
         this.huurprijsPerDag = huurprijsPerDag;
         this.verzekeringPerDag = verzekeringPerDag;
         this.verhuurd = verhuurd;
         this.merk = merk;
         this.type = type;
-        this.verhuur = null;
+        this.beschrijving = "Een boormachine van het merk " + merk + ". Het is de  " + type + " uitvoering.";
+        this.verhuurInformatie = null;
     }
 
     //Get methoden
@@ -34,47 +37,21 @@ public class Boormachine extends Product{
         return this.type;
     }
 
-    public double getHuurprijsPerDag() {
-        return this.huurprijsPerDag;
-    }
-
-    public double getVerzekeringPerDag() {
-        return this.verzekeringPerDag;
-    }
-
-    public boolean getVerhuurd() { return this.verhuurd; }
-
-    public String getNaam() {
-        return this.naam;
-    }
-
-    public String getBeschrijving() { return this.beschrijving;}
-
-    public VerhuurInformatie getVerhuur(){return this.verhuur;}
-
     //Set methoden
 
     public void setMerk(String merk) {
         this.merk = merk;
+        setBeschrijving();
     }
 
     public void setType(String type) {
         this.type = type;
+        setBeschrijving();
     }
 
-    public void setHuurprijsPerDag(double huurprijsPerDag) {
-        this.huurprijsPerDag = huurprijsPerDag;
+    private void setBeschrijving(){
+        this.beschrijving = "Een boormachine van het merk " + this.merk + ". Het is de  " + this.type + " uitvoering.";;
     }
-
-    public void setVerzekeringPerDag(double verzekeringPerDag) {
-        this.verzekeringPerDag = verzekeringPerDag;
-    }
-
-    public void setVerhuurd(boolean verhuren) {
-        this.verhuurd = verhuren;
-    }
-
-    public void setVerhuur(VerhuurInformatie verhuur){this.verhuur = verhuur;}
 
     //Interface methoden
     @Override

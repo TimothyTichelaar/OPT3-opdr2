@@ -18,7 +18,7 @@ public abstract class ProductOpslag {
         producten.add(new Personenauto());
         producten.add(new Personenauto("bmw", 1500, 50, 5, false));
         Product audi = new Personenauto("audi", 1700, 30, 4, true);
-        audi.setVerhuur(new VerhuurInformatie(PersonenOpslag.getMedewerkers().get(0), new Klant("Noah Albin"), true));
+        audi.setVerhuurInformatie(new VerhuurInformatie(PersonenOpslag.getMedewerkers().get(0), new Klant("Noah Albin"), true));
         producten.add(audi);
         producten.add(new Personenauto("volkswagen", 1300, 45, 5, false));
     }

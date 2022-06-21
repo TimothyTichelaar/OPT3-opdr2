@@ -3,9 +3,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="550" prefWidth="850" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opdr2.BeheerController">
+<AnchorPane prefHeight="550" prefWidth="850" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opdr2.BeheerController">
    <children>
       <Button id="menu" layoutX="78.0" layoutY="445.0" mnemonicParsing="false" onAction="#handle" prefHeight="57.0" prefWidth="689.0" text="Menu" />
-      <ListView fx:id="producten" layoutX="78.0" layoutY="52.0" prefHeight="356.0" prefWidth="689.0" />
+      <ListView fx:id="producten" layoutX="78.0" layoutY="52.0" onMouseClicked="#clickItem" prefHeight="356.0" prefWidth="689.0" />
    </children>
 </AnchorPane>
