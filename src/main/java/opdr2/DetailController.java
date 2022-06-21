@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -17,9 +18,9 @@ import java.util.Objects;
 
 public class DetailController extends SceneController {
     private Product product;
-    @FXML private TextField titel;
+    @FXML private Label titel;
 
-    @FXML private TextField beschrijving;
+    @FXML private Label beschrijving;
 
     @FXML private AnchorPane reserveren;
 

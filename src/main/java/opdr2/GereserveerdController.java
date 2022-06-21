@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -15,9 +16,9 @@ import java.util.Objects;
 
 public class GereserveerdController extends SceneController {
 
-    @FXML private TextField medewerkerfield;
+    @FXML private Label medewerkerfield;
 
-    @FXML private TextField klant;
+    @FXML private Label klant;
 
     private Product product;
 

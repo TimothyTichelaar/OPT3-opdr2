@@ -8,11 +8,11 @@
    <children>
       <AnchorPane id="reserveren" fx:id="reserveren" layoutX="79.0" layoutY="149.0" prefHeight="297.0" prefWidth="692.0" />
       <Button id="overzicht" layoutX="79.0" layoutY="457.0" mnemonicParsing="false" onAction="#handle" prefHeight="66.0" prefWidth="692.0" text="Annuleer" />
-      <TextField fx:id="titel" alignment="CENTER" editable="false" layoutX="79.0" layoutY="33.0" prefHeight="45.0" prefWidth="692.0">
+      <Label fx:id="titel" alignment="CENTER" layoutX="79.0" layoutY="33.0" prefHeight="45.0" prefWidth="692.0">
          <font>
             <Font size="23.0" />
          </font>
-      </TextField>
-      <TextField fx:id="beschrijving" alignment="CENTER" layoutX="79.0" layoutY="83.0" prefHeight="50.0" prefWidth="692.0" />
+      </Label>
+      <Label fx:id="beschrijving" alignment="CENTER" layoutX="79.0" layoutY="83.0" prefHeight="50.0" prefWidth="692.0" />
    </children>
 </AnchorPane>

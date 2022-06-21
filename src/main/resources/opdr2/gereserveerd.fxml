@@ -7,16 +7,16 @@
 
 <AnchorPane prefHeight="297.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opdr2.GereserveerdController">
    <children>
-      <TextField fx:id="medewerkerfield" editable="false" layoutX="237.0" layoutY="35.0" prefHeight="55.0" prefWidth="393.0">
+      <Label fx:id="medewerkerfield"  layoutX="237.0" layoutY="35.0" prefHeight="55.0" prefWidth="393.0">
          <font>
             <Font size="22.0" />
          </font>
-      </TextField>
-      <TextField fx:id="klant" editable="false" layoutX="237.0" layoutY="121.0" prefHeight="55.0" prefWidth="393.0">
+      </Label>
+      <Label fx:id="klant"  layoutX="237.0" layoutY="121.0" prefHeight="55.0" prefWidth="393.0">
          <font>
             <Font size="22.0" />
          </font>
-      </TextField>
+      </Label>
       <Button id="overzicht" layoutX="62.0" layoutY="201.0" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="568.0" text="Retour" />
       <Label layoutX="62.0" layoutY="35.0" prefHeight="55.0" prefWidth="155.0" text="Medewerker:">
          <font>
