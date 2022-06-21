@@ -7,23 +7,47 @@ public abstract class Product {
     public double huurprijsPerDag;
     public double verzekeringPerDag;
     public boolean verhuurd;
-    public VerhuurInformatie verhuur;
+    public VerhuurInformatie verhuurInformatie;
 
     //-----Constructor-----
 
     //-----Get methoden-----
-    public abstract String getNaam();
+    public String getNaam() {return this.naam;}
 
-    public abstract String getBeschrijving();
+    public String getBeschrijving(){return this.beschrijving;}
 
-    public abstract boolean getVerhuurd();
+    public double getHuurprijsPerDag() {
+        return this.huurprijsPerDag;
+    }
 
-    public abstract VerhuurInformatie getVerhuur();
+    public double getVerzekeringPerDag() {
+        return this.verzekeringPerDag;
+    }
+
+    public boolean getVerhuurd() {return this.verhuurd;}
+
+    public VerhuurInformatie getVerhuur(){return this.verhuurInformatie;};
 
     //-----Set methoden
-    public abstract void setVerhuurd(boolean verhuren);
 
-    public abstract void setVerhuur(VerhuurInformatie verhuur);
+
+    public void setNaam(String naam) {
+        this.naam = naam;
+    }
+
+    public void setHuurprijsPerDag(double huurprijsPerDag) {
+        this.huurprijsPerDag = huurprijsPerDag;
+    }
+
+    public void setVerzekeringPerDag(double verzekeringPerDag) {
+        this.verzekeringPerDag = verzekeringPerDag;
+    }
+
+    public void setVerhuurd(boolean verhuren) {
+        this.verhuurd = verhuren;
+    }
+
+    public void setVerhuurInformatie(VerhuurInformatie verhuurInformatie){this.verhuurInformatie = verhuurInformatie;}
 
     //-----Overige methoden-----
     abstract double prijsPerDag(boolean verzekering);

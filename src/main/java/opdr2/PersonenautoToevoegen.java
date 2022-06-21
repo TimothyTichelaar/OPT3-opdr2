@@ -3,6 +3,7 @@ package opdr2;
 public class PersonenautoToevoegen extends ItemToevoegen{
 
     public PersonenautoToevoegen(){
+        super();
         getProductInformatie(addProduct());
     }
 

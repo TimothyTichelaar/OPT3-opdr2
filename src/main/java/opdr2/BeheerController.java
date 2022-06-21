@@ -30,16 +30,18 @@ public class BeheerController extends SceneController {
             @Override
             public void handle(MouseEvent event) {
                 String product = String.valueOf(producten.getSelectionModel().getSelectedItems());
-                String stageName = "toevoegen-view.fxml";
+                product = product.substring(1,product.length()-1);
+                String stageName = "toevoegen";
                 Parent root = null;
-                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(OverzichtController.class.getResource(stageName)));
+                FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(OverzichtController.class.getResource(stageName + "-view.fxml")));
                 try {
                     root = loader.load();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
-                SceneController controller = loader.getController();
+                ToevoegenController controller = loader.getController();
                 controller.setMedewerker(medewerker);
+                controller.setProductsoort(product);
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 String scherm = stageName.substring(0,1).toUpperCase() + stageName.substring(1);
