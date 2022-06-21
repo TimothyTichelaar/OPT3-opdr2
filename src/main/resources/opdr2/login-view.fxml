@@ -46,7 +46,7 @@
                         <Font size="40.0" />
                     </font>
                 </Label>
-            <Label fx:id="foutmeldingLabel" layoutX="20.0" layoutY="71.0" prefHeight="37.0" prefWidth="372.0" text="De combinatie code/wachtwoord is incorrect!" textFill="#f50606" />
+            <Label fx:id="foutmeldingLabel" layoutX="20.0" layoutY="71.0" prefHeight="37.0" prefWidth="372.0" text="De combinatie code/wachtwoord is incorrect!" textFill="#f50606" visible="false" />
             </children>
         </Pane>
     </children>

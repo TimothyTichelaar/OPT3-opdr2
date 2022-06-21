@@ -10,9 +10,8 @@ import java.io.IOException;
 
 public class MenuApplication extends Stage {
 
-    private LoginApplication login;
     private Pane rootPane;
-    public MenuApplication (LoginApplication login, Medewerker medewerker) {
+    public MenuApplication (Stage stage, Medewerker medewerker) {
         FXMLLoader parent = new FXMLLoader(MenuApplication.class.getResource("menu-view.fxml"));
         Scene scene = null;
         try {
@@ -23,7 +22,6 @@ public class MenuApplication extends Stage {
         SceneController controller = parent.getController();
         controller.setMedewerker(medewerker);
 
-        Stage stage = new Stage();
         stage.setTitle("Rent-a-Thing // Menu        " + medewerker.getNaam());
         stage.setScene(scene);
         stage.setAlwaysOnTop(false);
