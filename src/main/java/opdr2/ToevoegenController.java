@@ -42,7 +42,7 @@ public class ToevoegenController extends SceneController{
         info2Label.setText(item.uniekeInfo2);
     }
 
-    public void setInfo(){
+    private void setInfo(ActionEvent event){
         String naam = productField.getText();
         String info1 = info1Field.getText();
         String info2 = info2Field.getText();
@@ -53,11 +53,9 @@ public class ToevoegenController extends SceneController{
         item.setInformatie1(info1);
         item.setInformatie2(info2);
         ProductOpslag.addProduct(item);
-    }
-
-    @Override
-    public void handle(ActionEvent event) {
-        setInfo();
+        Observable.update();
         super.handle(event);
     }
+
+
 }

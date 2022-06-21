@@ -45,10 +45,10 @@ public class OverzichtController extends SceneController {
 
     @Override
     public void update() {
-       // producten.getItems().removeAll();
-       // data = FXCollections.observableArrayList(ProductOpslag.getProducten());
-       // producten.setItems(data);
-        producten.refresh();
+       producten.getItems().removeAll();
+       ObservableList<Product> data = FXCollections.observableArrayList(ProductOpslag.getProducten());
+       producten.setItems(data);
+       producten.refresh();
     }
 
     public void clickItem(MouseEvent event) {
