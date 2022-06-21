@@ -42,6 +42,7 @@ public class ToevoegenController extends SceneController{
         info2Label.setText(item.uniekeInfo2);
     }
 
+    @FXML
     private void setInfo(ActionEvent event){
         String naam = productField.getText();
         String info1 = info1Field.getText();

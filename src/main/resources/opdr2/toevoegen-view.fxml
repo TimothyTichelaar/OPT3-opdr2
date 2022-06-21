@@ -34,6 +34,6 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="annuleer" layoutX="67.0" layoutY="490.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="730.0" text="Annuleren" />
+      <Button id="beheer" fx:id="annuleer" layoutX="67.0" layoutY="490.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="730.0" text="Annuleren" />
    </children>
 </AnchorPane>
