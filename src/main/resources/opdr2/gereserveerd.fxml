@@ -18,18 +18,15 @@
          </font>
       </TextField>
       <Button id="overzicht" layoutX="62.0" layoutY="201.0" mnemonicParsing="false" onAction="#handle" prefHeight="55.0" prefWidth="568.0" text="Retour" />
-      <TextField editable="false" layoutX="62.0" layoutY="35.0" prefHeight="55.0" prefWidth="155.0" text="Medewerker:">
+      <Label layoutX="62.0" layoutY="35.0" prefHeight="55.0" prefWidth="155.0" text="Medewerker:">
          <font>
             <Font size="22.0" />
          </font>
-         <effect>
-            <Blend opacity="0.0" />
-         </effect>
-      </TextField>
-      <TextField layoutX="65.0" layoutY="121.0" prefHeight="55.0" prefWidth="149.0" text="Klant:">
+      </Label>
+      <Label layoutX="65.0" layoutY="121.0" prefHeight="55.0" prefWidth="149.0" text="Klant:">
          <font>
             <Font size="22.0" />
          </font>
-      </TextField>
+      </Label>
    </children>
 </AnchorPane>
