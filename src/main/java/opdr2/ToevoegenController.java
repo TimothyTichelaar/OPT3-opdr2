@@ -1,5 +1,6 @@
 package opdr2;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -25,6 +26,7 @@ public class ToevoegenController extends SceneController{
 
     public void setProductsoort(String productsoort){
         this.productsoort = productsoort;
+        productField.setText(productsoort);
         itemAanmaken();
     }
 
@@ -50,5 +52,11 @@ public class ToevoegenController extends SceneController{
         item.setProductInformatie(productInformatie);
         item.setInformatie1(info1);
         item.setInformatie2(info2);
+    }
+
+    @Override
+    public void handle(ActionEvent event) {
+        setInfo();
+        super.handle(event);
     }
 }

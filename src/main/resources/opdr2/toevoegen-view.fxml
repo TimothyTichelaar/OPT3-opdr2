@@ -24,7 +24,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField id="product" fx:id="productField" layoutX="282.0" layoutY="53.0" prefHeight="44.0" prefWidth="515.0" />
+      <TextField id="product" fx:id="productField" editable="false" layoutX="282.0" layoutY="53.0" prefHeight="44.0" prefWidth="515.0" />
       <TextField id="info1" fx:id="info1Field" layoutX="282.0" layoutY="121.0" prefHeight="44.0" prefWidth="515.0" />
       <TextField id="info2" fx:id="info2Field" layoutX="282.0" layoutY="194.0" prefHeight="44.0" prefWidth="515.0" />
       <TextField id="dagprijs" fx:id="dagprijsField" layoutX="282.0" layoutY="269.0" prefHeight="44.0" prefWidth="515.0" />
