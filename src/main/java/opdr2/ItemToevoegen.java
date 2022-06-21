@@ -1,11 +1,7 @@
 package opdr2;
 
 public abstract class ItemToevoegen {
-   /* public void getProductInformatie (Product product, Paneclass panenaam) {
+    public abstract void getProductInformatie (Product product);
 
-    }
-
-    public Product addProduct (Paneclass panenaam) {
-
-    }*/
+    public abstract Product addProduct ();
 }

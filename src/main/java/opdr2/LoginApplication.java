@@ -11,6 +11,8 @@ public class LoginApplication extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
+        PersonenOpslag.initialize();
+        ProductOpslag.initialize();
         FXMLLoader parent = new FXMLLoader(LoginApplication.class.getResource("login-view.fxml"));
         Scene scene = new Scene(parent.load(), 850, 550);
         stage.setTitle("Rent-a-Thing // login");

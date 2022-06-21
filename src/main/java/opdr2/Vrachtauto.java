@@ -13,6 +13,7 @@ public class Vrachtauto extends Product{
         this.verhuurd = false;
         this.laadvermogen = 0;
         this.gewicht = 0;
+        this.verhuur = null;
     }
 
     public Vrachtauto (int laadvermogen, int gewicht, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
@@ -21,6 +22,7 @@ public class Vrachtauto extends Product{
         this.verhuurd = verhuurd;
         this.laadvermogen = laadvermogen;
         this.gewicht = gewicht;
+        this.verhuur = null;
     }
 
     //Get methoden
@@ -41,6 +43,8 @@ public class Vrachtauto extends Product{
     }
 
     public boolean getVerhuurd() { return this.verhuurd; }
+
+    public VerhuurInformatie getVerhuur() {return this.verhuur;}
 
     //Set methoden
 
@@ -64,9 +68,21 @@ public class Vrachtauto extends Product{
         this.verhuurd = verhuren;
     }
 
+    @Override
+    public String getNaam() {
+        return this.naam;
+    }
+
+    @Override
+    public String getBeschrijving() {
+        return this.beschrijving;
+    }
+
+    public void setVerhuur(VerhuurInformatie verhuur){this.verhuur = verhuur;}
+
     //Interface methoden
     @Override
-    public double prijsPerDag (boolean verzekering, int leeftijd) {
+    public double prijsPerDag (boolean verzekering) {
         return 0;
     }
 }

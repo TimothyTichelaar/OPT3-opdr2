@@ -13,6 +13,7 @@ public class Boormachine extends Product{
         this.verhuurd = false;
         this.merk = "";
         this.type = "";
+        this.verhuur = null;
     }
 
     public Boormachine (String merk, String type, double huurprijsPerDag, double verzekeringPerDag, boolean verhuurd) {
@@ -21,6 +22,7 @@ public class Boormachine extends Product{
         this.verhuurd = verhuurd;
         this.merk = merk;
         this.type = type;
+        this.verhuur = null;
     }
 
     //Get methoden
@@ -41,6 +43,14 @@ public class Boormachine extends Product{
     }
 
     public boolean getVerhuurd() { return this.verhuurd; }
+
+    public String getNaam() {
+        return this.naam;
+    }
+
+    public String getBeschrijving() { return this.beschrijving;}
+
+    public VerhuurInformatie getVerhuur(){return this.verhuur;}
 
     //Set methoden
 
@@ -64,9 +74,11 @@ public class Boormachine extends Product{
         this.verhuurd = verhuren;
     }
 
+    public void setVerhuur(VerhuurInformatie verhuur){this.verhuur = verhuur;}
+
     //Interface methoden
     @Override
-    public double prijsPerDag (boolean verzekering, int leeftijd) {
+    public double prijsPerDag (boolean verzekering) {
         return 0;
     }
 }
