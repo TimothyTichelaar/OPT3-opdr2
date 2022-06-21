@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="opdr2.ToevoegenController">
    <children>
-      <Button id="beheer" fx:id="toevoegen" layoutX="67.0" layoutY="416.0" mnemonicParsing="false" onAction="#handle" prefHeight="60.0" prefWidth="730.0" text="Toevoegen" />
+      <Button id="beheer" fx:id="toevoegen" layoutX="67.0" layoutY="416.0" mnemonicParsing="false" onAction="#setInfo" prefHeight="60.0" prefWidth="730.0" text="Toevoegen" />
       <Label fx:id="info1Label" layoutX="67.0" layoutY="121.0" prefHeight="44.0" prefWidth="161.0" text="Info1:">
          <font>
             <Font size="20.0" />
@@ -34,6 +34,6 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button id="beheer" fx:id="annuleer" layoutX="67.0" layoutY="490.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="730.0" text="Annuleren" />
+      <Button id="beheer" fx:id="annuleer" layoutX="67.0" layoutY="490.0" mnemonicParsing="false" onAction="#handle" prefHeight="38.0" prefWidth="730.0" text="Annuleren" />
    </children>
 </AnchorPane>
