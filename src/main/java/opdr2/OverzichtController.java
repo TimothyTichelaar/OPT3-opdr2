@@ -28,7 +28,6 @@ public class OverzichtController extends SceneController {
 
 
     public void initialize(){
-        //static ProductOpslag productOpslag = new ProductOpslag();
         ObservableList<Product> data = FXCollections.observableArrayList(ProductOpslag.getProducten());
 
         column1.setCellValueFactory(new PropertyValueFactory<>("naam"));
