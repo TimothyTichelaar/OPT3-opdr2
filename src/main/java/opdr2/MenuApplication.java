@@ -26,6 +26,7 @@ public class MenuApplication extends Stage {
         stage.setTitle("Rent-a-Thing // Menu        " + medewerker.getNaam());
         stage.setScene(scene);
         stage.setAlwaysOnTop(false);
+        stage.setOnCloseRequest( e -> {Observable.deleteObserver(controller); SceneController.ingelogd.remove(medewerker);});
         stage.show();
     }
 

@@ -45,7 +45,7 @@ public abstract class SceneController implements EventHandler<ActionEvent> {
         String scherm = stageName.substring(0,1).toUpperCase() + stageName.substring(1);
         stage.setTitle("Rent-a-Thing // " + scherm + "        " +  medewerker.getNaam());
         stage.setScene(scene);
-        stage.setOnCloseRequest( e -> Observable.deleteObserver(controller) );
+        stage.setOnCloseRequest( e -> {Observable.deleteObserver(controller); ingelogd.remove(medewerker);});
         stage.show();
     }
 
