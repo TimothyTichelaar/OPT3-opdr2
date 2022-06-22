@@ -11,6 +11,10 @@ public class Vrachtauto extends Product{
         this(0, 0, null);
     }
 
+    public Vrachtauto(ProductInformatie productInformatie){
+        this(0, 0, productInformatie);
+    }
+
     public Vrachtauto (int laadvermogen, int gewicht, ProductInformatie productInformatie) {
         this.laadvermogen = laadvermogen;
         this.gewicht = gewicht;

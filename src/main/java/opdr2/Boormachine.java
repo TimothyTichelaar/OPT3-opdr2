@@ -11,6 +11,10 @@ public class Boormachine extends Product{
         this("", "", null);
     }
 
+    public Boormachine(ProductInformatie productInformatie){
+        this("", "", productInformatie);
+    }
+
     public Boormachine (String merk, String type, ProductInformatie productInfo) {
         this.merk = merk;
         this.type = type;

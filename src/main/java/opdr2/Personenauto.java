@@ -11,6 +11,10 @@ public class Personenauto extends Product{
         this("", 0, null);
     }
 
+    public Personenauto(ProductInformatie productInformatie){
+        this("", 0, productInformatie);
+    }
+
     public Personenauto (String merk, int gewicht, ProductInformatie productInformatie) {
         this.merk = merk;
         this.gewicht = gewicht;

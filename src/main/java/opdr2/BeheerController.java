@@ -26,8 +26,7 @@ public class BeheerController extends SceneController {
     }
 
     public void clickItem(MouseEvent event) {
-        String product = String.valueOf(producten.getSelectionModel().getSelectedItems());
-        product = product.substring(1,product.length()-1);
+        int product = producten.getSelectionModel().getSelectedIndex();
         String stageName = "toevoegen";
         Parent root;
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(OverzichtController.class.getResource(stageName + "-view.fxml")));
