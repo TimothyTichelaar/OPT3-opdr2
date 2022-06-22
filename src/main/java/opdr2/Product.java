@@ -25,7 +25,7 @@ public abstract class Product {
         return verhuurd;
     }
 
-    public abstract String getBeschrijving();
+    public String getBeschrijving(){return this.beschrijving;}
 
     public String getNaam(){return productInformatie.getNaam();}
 

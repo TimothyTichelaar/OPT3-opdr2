@@ -28,8 +28,6 @@ public class Vrachtauto extends Product{
         return this.gewicht;
     }
 
-    public String getBeschrijving(){return this.beschrijving;}
-
     //Set methoden
     public void setInformatie1(String laadvermogen) {
         this.laadvermogen = Integer.parseInt(laadvermogen);
@@ -38,16 +36,6 @@ public class Vrachtauto extends Product{
 
     public void setInformatie2(String gewicht) {
         this.gewicht = Integer.parseInt(gewicht);
-        setBeschrijving();
-    }
-
-    public void setLaadvermogen(int laadvermogen) {
-        this.laadvermogen = laadvermogen;
-        setBeschrijving();
-    }
-
-    public void setGewicht(int gewicht) {
-        this.gewicht = gewicht;
         setBeschrijving();
     }
 

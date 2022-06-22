@@ -30,8 +30,6 @@ public class Personenauto extends Product{
         return this.gewicht;
     }
 
-    public String getBeschrijving(){return this.beschrijving;}
-
     //Set methoden
     public void setInformatie1(String merk) {
         this.merk = merk;
