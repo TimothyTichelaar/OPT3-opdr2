@@ -52,7 +52,7 @@ public class OverzichtController extends SceneController {
     public void clickItem(MouseEvent event) {
         Product product = producten.getItems().get(producten.getSelectionModel().getSelectedCells().get(0).getRow());
         String stageName = "detail";
-        Parent root = null;
+        Parent root;
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(OverzichtController.class.getResource(stageName + "-view.fxml")));
         DetailController controller;
         try {
