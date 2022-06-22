@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class ToevoegenController extends SceneController{
+public class ToevoegenController extends ProductInfoController{
     private int productsoort;
 
     private Product item;
@@ -27,20 +27,20 @@ public class ToevoegenController extends SceneController{
     public void setProductsoort(int productsoort){
         this.productsoort = productsoort;
         itemAanmaken();
-        productField.setText(item.getNaam());
+        productField.setText(product.getNaam());
     }
 
     private void itemAanmaken () {
         //System.out.println(productsoort);
         if(productsoort == 0){
-            item = ProductFactory.PERSONENAUTO_FACTORY.maakProduct();
+            product = ProductFactory.PERSONENAUTO_FACTORY.maakProduct();
         }if(productsoort == 1){
-            item = ProductFactory.VRACHTAUTO_FACTORY.maakProduct();
+            product = ProductFactory.VRACHTAUTO_FACTORY.maakProduct();
         }if(productsoort == 2){
-            item = ProductFactory.BOORMACHINE_FACTORY.maakProduct();
+            product = ProductFactory.BOORMACHINE_FACTORY.maakProduct();
         }
-        info1Label.setText(item.uniekeInfo1);
-        info2Label.setText(item.uniekeInfo2);
+        info1Label.setText(product.uniekeInfo1);
+        info2Label.setText(product.uniekeInfo2);
     }
 
     @FXML
@@ -49,13 +49,13 @@ public class ToevoegenController extends SceneController{
         String info2 = info2Field.getText();
         double dagprijs = Double.parseDouble(dagprijsField.getText());
         double verzekering = Double.parseDouble(verzekeringField.getText());
-        ProductInformatie productInformatie = item.getProductInformatie();
+        ProductInformatie productInformatie = product.getProductInformatie();
         productInformatie.setHuurprijsPerDag(dagprijs);
         productInformatie.setVerzekeringPerDag(verzekering);
-        item.setProductInformatie(productInformatie);
-        item.setInformatie1(info1);
-        item.setInformatie2(info2);
-        ProductOpslag.addProduct(item);
+        product.setProductInformatie(productInformatie);
+        product.setInformatie1(info1);
+        product.setInformatie2(info2);
+        ProductOpslag.addProduct(product);
         Observable.update();
         super.handle(event);
     }
