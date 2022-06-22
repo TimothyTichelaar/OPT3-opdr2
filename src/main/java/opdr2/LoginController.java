@@ -20,20 +20,6 @@ public class LoginController extends SceneController {
 
     @FXML private Label foutmeldingLabel;
 
-    //final private LoginApplication login;
-
-    //private final List<String> ingelogd = new ArrayList();
-
-    public LoginController(){
-        this(null);
-    }
-
-    public LoginController (LoginApplication login)
-    {
-        //this.login = login;
-        //foutmeldingLabel.setVisible(false);
-    }
-
     @Override
     public void handle (ActionEvent actionEvent)
     {
