@@ -15,9 +15,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class ReserverenController extends SceneController {
-    public Product product;
-
+public class ReserverenController extends ProductInfoController {
     @FXML private  Button overzicht;
 
     @FXML private TextField klant;
@@ -26,8 +24,9 @@ public class ReserverenController extends SceneController {
 
     @FXML private CheckBox verzekering;
 
+    @Override
     public void setProduct(Product prod){
-        this.product = prod;
+        super.setProduct(prod);
         setPrijs();
     }
 

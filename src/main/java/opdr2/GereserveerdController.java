@@ -14,16 +14,15 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class GereserveerdController extends SceneController {
+public class GereserveerdController extends ProductInfoController {
 
     @FXML private Label medewerkerfield;
 
     @FXML private Label klant;
 
-    private Product product;
-
+    @Override
     public void setProduct(Product prod){
-        this.product = prod;
+        super.setProduct(prod);
         medewerkerfield.setText(product.getVerhuur().getMedewerker().getNaam());
         klant.setText(product.getVerhuur().getKlant().getNaam());
     }

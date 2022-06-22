@@ -16,19 +16,22 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class DetailController extends SceneController {
-    private Product product;
+public class DetailController extends ProductInfoController {
     @FXML private Label titel;
 
     @FXML private Label beschrijving;
 
     @FXML private AnchorPane reserveren;
 
-    public void setProduct(Product product) throws IOException {
-        this.product = product;
+    public void setProduct(Product product) {
+        super.setProduct(product);
         setTitel();
         setBeschrijving();
-        setReserveren();
+        try {
+            setReserveren();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 //    public void gerbuikProductInformatie() throws IOException {
