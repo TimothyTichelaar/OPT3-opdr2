@@ -25,7 +25,7 @@ public abstract class ProductOpslag {
         producten.add(audi);
 
         ProductInformatie auto3 = new ProductInformatie("Personenauto Volkswagen", 45, 5);
-        producten.add(new Personenauto("volkswagen", 1300, auto3));
+        producten.add(new Personenauto("Volkswagen", 1300, auto3));
     }
 
     public static void addProduct(Product product){

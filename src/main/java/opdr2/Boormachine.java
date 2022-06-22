@@ -18,8 +18,8 @@ public class Boormachine extends Product{
     public Boormachine (String merk, String type, ProductInformatie productInfo) {
         this.merk = merk;
         this.type = type;
-        this.uniekeInfo1 = "merk";
-        this.uniekeInfo2 = "type";
+        this.uniekeInfo1 = "Merk";
+        this.uniekeInfo2 = "Type";
         this.beschrijving = "Een boormachine van het merk " + merk + ". Het is de  " + type + " uitvoering.";
         this.productInformatie = productInfo;
         this.verhuurInformatie = null;
