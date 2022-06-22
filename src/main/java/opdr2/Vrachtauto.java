@@ -14,6 +14,8 @@ public class Vrachtauto extends Product{
     public Vrachtauto (int laadvermogen, int gewicht, ProductInformatie productInformatie) {
         this.laadvermogen = laadvermogen;
         this.gewicht = gewicht;
+        this.uniekeInfo1 = "Laadverogen";
+        this.uniekeInfo2 = "Gewicht";
         this.beschrijving = "Een vrachtauto met " + laadvermogen + "kg laadvermogen. Het heeft een gewicht van " + gewicht + "kg.";
         this.productInformatie = productInformatie;
         this.verhuurInformatie = null;
