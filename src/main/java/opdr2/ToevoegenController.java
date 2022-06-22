@@ -8,8 +8,6 @@ import javafx.scene.control.TextField;
 public class ToevoegenController extends ProductInfoController{
     private int productsoort;
 
-    private Product item;
-
     @FXML Label info1Label;
 
     @FXML Label info2Label;
