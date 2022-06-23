@@ -16,13 +16,12 @@ public class Personenauto extends Product{
     }
 
     public Personenauto (String merk, int gewicht, ProductInformatie productInformatie) {
+        super(productInformatie, null);
         this.merk = merk;
         this.gewicht = gewicht;
-        this.productInformatie = productInformatie;
         if(productInformatie != null){
             setInformatieBeschrijving();
         }
-        this.verhuurInformatie = null;
     }
 
     //Get methoden

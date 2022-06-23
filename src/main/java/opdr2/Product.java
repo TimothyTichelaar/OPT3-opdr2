@@ -7,6 +7,11 @@ public abstract class Product {
 
     //-----Constructor-----
 
+    Product(ProductInformatie productInformatie, VerhuurInformatie verhuurInformatie){
+        this.productInformatie = productInformatie;
+        this.verhuurInformatie = verhuurInformatie;
+    }
+
     //-----Get methoden-----
 
 

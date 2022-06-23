@@ -15,14 +15,13 @@ public class Boormachine extends Product{
         this("", "", productInformatie);
     }
 
-    public Boormachine (String merk, String type, ProductInformatie productInfo) {
+    public Boormachine (String merk, String type, ProductInformatie productInformatie) {
+        super(productInformatie, null);
         this.merk = merk;
         this.type = type;
-        this.productInformatie = productInfo;
         if(productInformatie != null){
             setInformatieBeschrijving();
         }
-        this.verhuurInformatie = null;
     }
 
     //Get methoden
@@ -46,7 +45,7 @@ public class Boormachine extends Product{
     }
 
     private void setBeschrijving(){
-        productInformatie.beschrijving = "Een boormachine van het merk " + this.merk + ". Het is de  " + this.type + " uitvoering.";;
+        productInformatie.beschrijving = "Een boormachine van het merk " + this.merk + ". Het is de  " + this.type + " uitvoering.";
     }
 
     public void setInformatieBeschrijving(){

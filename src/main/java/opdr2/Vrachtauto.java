@@ -16,13 +16,12 @@ public class Vrachtauto extends Product{
     }
 
     public Vrachtauto (int laadvermogen, int gewicht, ProductInformatie productInformatie) {
+        super(productInformatie, null);
         this.laadvermogen = laadvermogen;
         this.gewicht = gewicht;
-        this.productInformatie = productInformatie;
         if(productInformatie != null){
             setInformatieBeschrijving();
         }
-        this.verhuurInformatie = null;
     }
 
     //Get methoden
