@@ -25,13 +25,6 @@ public class Vrachtauto extends Product{
     }
 
     //Get methoden
-    public int getLaadvermogen () {
-        return this.laadvermogen;
-    }
-
-    public int getGewicht () {
-        return this.gewicht;
-    }
 
     //Set methoden
     public void setInformatie1(String laadvermogen) {

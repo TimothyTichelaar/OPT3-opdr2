@@ -25,13 +25,6 @@ public class Boormachine extends Product{
     }
 
     //Get methoden
-    public String getMerk () {
-        return this.merk;
-    }
-
-    public String getType () {
-        return this.type;
-    }
 
     //Set methoden
     public void setInformatie1(String merk) {
