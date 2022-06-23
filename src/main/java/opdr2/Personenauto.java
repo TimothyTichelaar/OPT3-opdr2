@@ -45,15 +45,15 @@ public class Personenauto extends Product{
     }
 
     private void setBeschrijving(){
-        productInformatie.beschrijving = "Een personenauto van het merk " + this.merk +
-                ". Het heeft een gewicht van " + this.gewicht + "kg.";
+        productInformatie.setBeschrijving("Een personenauto van het merk " + this.merk +
+                ". Het heeft een gewicht van " + this.gewicht + "kg.");
     }
 
     @Override
     public void setInformatieBeschrijving() {
-        productInformatie.uniekeInfo1 = "Merk";
-        productInformatie.uniekeInfo2 = "Gewicht";
-        productInformatie.beschrijving = "Een personenauto van het merk " + merk + ". Het heeft een gewicht van " + gewicht + "kg.";
+        productInformatie.setUniekeInfo1("Merk");
+        productInformatie.setUniekeInfo2("Gewicht");
+        productInformatie.setBeschrijving("Een personenauto van het merk " + merk + ". Het heeft een gewicht van " + gewicht + "kg.");
     }
 
     //Interface methoden

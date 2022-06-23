@@ -6,9 +6,9 @@ public class ProductInformatie {
     private double huurprijsPerDag;
     private double verzekeringPerDag;
 
-    public String uniekeInfo1;
-    public String uniekeInfo2;
-    public String beschrijving;
+    private String uniekeInfo1;
+    private String uniekeInfo2;
+    private String beschrijving;
 
     public ProductInformatie (String naam, double huurprijsPerDag, double verzekeringPerDag) {
         this.naam = naam;
@@ -27,6 +27,12 @@ public class ProductInformatie {
         return this.verzekeringPerDag;
     }
 
+    public String getUniekeInfo1() {return uniekeInfo1;}
+
+    public String getUniekeInfo2() {return uniekeInfo2;}
+
+    public String getBeschrijving() {return beschrijving;}
+
     public void setNaam(String naam) {
         this.naam = naam;
     }
@@ -38,4 +44,12 @@ public class ProductInformatie {
     public void setVerzekeringPerDag(double verzekeringPerDag) {
         this.verzekeringPerDag = verzekeringPerDag;
     }
+
+    public void setUniekeInfo1(String uniekeInfo1) {this.uniekeInfo1 = uniekeInfo1;}
+
+    public void setUniekeInfo2(String uniekeInfo2) {
+        this.uniekeInfo2 = uniekeInfo2;
+    }
+
+    public void setBeschrijving(String beschrijving) {this.beschrijving = beschrijving;}
 }

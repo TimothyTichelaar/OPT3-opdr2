@@ -40,7 +40,7 @@ public class DetailController extends ProductInfoController {
 //        setReserveren();
 //    }
 
-    private void setTitel(){this.titel.setText(this.product.getProductInformatie().getNaam());}
+    private void setTitel(){this.titel.setText(this.product.productInformatie.getNaam());}
 
     private void setBeschrijving(){this.beschrijving.setText(this.product.getBeschrijving());}
 

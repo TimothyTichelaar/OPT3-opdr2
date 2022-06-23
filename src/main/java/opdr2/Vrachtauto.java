@@ -45,16 +45,16 @@ public class Vrachtauto extends Product{
     }
 
     private void setBeschrijving(){
-        productInformatie.beschrijving = "Een vrachtauto met " + this.laadvermogen +
-                "kg laadvermogen. Het heeft een gewicht van " + this.gewicht + "kg.";
+        productInformatie.setBeschrijving("Een vrachtauto met " + this.laadvermogen +
+                "kg laadvermogen. Het heeft een gewicht van " + this.gewicht + "kg.");
     }
 
     @Override
     public void setInformatieBeschrijving() {
-        productInformatie.uniekeInfo1 = "Laadverogen";
-        productInformatie.uniekeInfo2 = "Gewicht";
-        productInformatie.beschrijving = "Een vrachtauto met " + laadvermogen +
-                "kg laadvermogen. Het heeft een gewicht van " + gewicht + "kg.";
+        this.productInformatie.setUniekeInfo1("Laadverogen");
+        this.productInformatie.setUniekeInfo2("Gewicht");
+        this.productInformatie.setBeschrijving("Een vrachtauto met " + laadvermogen +
+                "kg laadvermogen. Het heeft een gewicht van " + gewicht + "kg.");
     }
 
     //Interface methoden

@@ -13,8 +13,6 @@ public abstract class Product {
     }
 
     //-----Get methoden-----
-
-
     public ProductInformatie getProductInformatie() {
         return this.productInformatie;
     }
@@ -23,7 +21,7 @@ public abstract class Product {
 
     public boolean getVerhuurd() {return verhuurInformatie != null;}
 
-    public String getBeschrijving(){return productInformatie.beschrijving;}
+    public String getBeschrijving(){return productInformatie.getBeschrijving();}
 
     public String getNaam(){return productInformatie.getNaam();}
 
