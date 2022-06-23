@@ -46,13 +46,17 @@ public class Vrachtauto extends Product{
     public void setInformatieBeschrijving() {
         this.productInformatie.setUniekeInfo1("Laadverogen");
         this.productInformatie.setUniekeInfo2("Gewicht");
-        this.productInformatie.setBeschrijving("Een vrachtauto met " + laadvermogen +
-                "kg laadvermogen. Het heeft een gewicht van " + gewicht + "kg.");
+        this.productInformatie.setBeschrijving("Een vrachtauto met " + this.laadvermogen +
+                "kg laadvermogen. Het heeft een gewicht van " + this.gewicht + "kg.");
     }
 
     //Interface methoden
     @Override
     public double prijsPerDag (boolean verzekering) {
-        return 0;
+        double huurprijs = this.productInformatie.getHuurprijsPerDag() * this.laadvermogen;
+        if(verzekering){
+            huurprijs += (this.productInformatie.getVerzekeringPerDag() * this.gewicht);
+        }
+        return huurprijs;
     }
 }

@@ -52,9 +52,10 @@ public class Personenauto extends Product{
     //Interface methoden
     @Override
     public double prijsPerDag (boolean verzekering) {
+        double huurprijs = productInformatie.getHuurprijsPerDag();
         if(verzekering){
-            return productInformatie.getHuurprijsPerDag() + productInformatie.getVerzekeringPerDag();
+            huurprijs += (productInformatie.getVerzekeringPerDag() * this.gewicht);
         }
-        return productInformatie.getHuurprijsPerDag() ;
+        return huurprijs;
     }
 }

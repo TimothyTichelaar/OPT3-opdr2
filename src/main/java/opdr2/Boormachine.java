@@ -50,6 +50,10 @@ public class Boormachine extends Product{
     //Interface methoden
     @Override
     public double prijsPerDag (boolean verzekering) {
-        return 0;
+        double huurprijs = this.productInformatie.getHuurprijsPerDag();
+        if(verzekering){
+            huurprijs += this.productInformatie.getVerzekeringPerDag();
+        }
+        return huurprijs;
     }
 }
