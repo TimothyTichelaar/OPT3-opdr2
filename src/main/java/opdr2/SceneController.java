@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public abstract class SceneController implements EventHandler<ActionEvent> {
+public abstract class SceneController implements EventHandler<ActionEvent>, Observer{
     public static List<Medewerker> ingelogd = new ArrayList();
 
     public Medewerker medewerker;
@@ -30,7 +30,7 @@ public abstract class SceneController implements EventHandler<ActionEvent> {
     public void handle(ActionEvent event) {
 
         String stageName = ((Node)event.getSource()).getId();
-        Parent root = null;
+        Parent root;
         FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(SceneController.class.getResource(stageName + "-view.fxml")));
         try {
             root = loader.load();
