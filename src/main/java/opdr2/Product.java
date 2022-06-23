@@ -16,9 +16,7 @@ public abstract class Product {
 
     public VerhuurInformatie getVerhuurInformatie(){return this.verhuurInformatie;}
 
-    public boolean getVerhuurd() {
-        return verhuurInformatie != null;
-    }
+    public boolean getVerhuurd() {return verhuurInformatie != null;}
 
     public String getBeschrijving(){return productInformatie.beschrijving;}
 
