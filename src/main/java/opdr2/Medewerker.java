@@ -24,10 +24,6 @@ public class Medewerker {
         this.naam = naam;
     }
 
-    public void setNummer(String nummer) {
-        this.nummer = nummer;
-    }
-
     public void setWachtwoord(String wachtwoord) {
         this.wachtwoord = wachtwoord;
     }
