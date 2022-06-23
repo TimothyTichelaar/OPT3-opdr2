@@ -14,7 +14,6 @@ public class ProductInformatie {
         this.naam = naam;
         this.huurprijsPerDag = huurprijsPerDag;
         this.verzekeringPerDag = verzekeringPerDag;
-        //this.beschrijving = "Een personenauto van het merk " + merk + ". Het heeft een gewicht van " + gewicht + "kg.";
     }
 
     public String getNaam() {return this.naam;}
@@ -33,9 +32,7 @@ public class ProductInformatie {
 
     public String getBeschrijving() {return beschrijving;}
 
-    public void setNaam(String naam) {
-        this.naam = naam;
-    }
+    //-----Set methoden-----
 
     public void setHuurprijsPerDag(double huurprijsPerDag) {
         this.huurprijsPerDag = huurprijsPerDag;
