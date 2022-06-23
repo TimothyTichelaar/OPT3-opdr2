@@ -18,10 +18,10 @@ public class Boormachine extends Product{
     public Boormachine (String merk, String type, ProductInformatie productInfo) {
         this.merk = merk;
         this.type = type;
-        this.uniekeInfo1 = "Merk";
-        this.uniekeInfo2 = "Type";
-        this.beschrijving = "Een boormachine van het merk " + merk + ". Het is de  " + type + " uitvoering.";
         this.productInformatie = productInfo;
+        if(productInformatie != null){
+            setInformatieBeschrijving();
+        }
         this.verhuurInformatie = null;
     }
 
@@ -46,7 +46,13 @@ public class Boormachine extends Product{
     }
 
     private void setBeschrijving(){
-        this.beschrijving = "Een boormachine van het merk " + this.merk + ". Het is de  " + this.type + " uitvoering.";;
+        productInformatie.beschrijving = "Een boormachine van het merk " + this.merk + ". Het is de  " + this.type + " uitvoering.";;
+    }
+
+    public void setInformatieBeschrijving(){
+        productInformatie.uniekeInfo1 = "Merk";
+        productInformatie.uniekeInfo2 = "Type";
+        productInformatie.beschrijving = "Een boormachine van het merk " + merk + ". Het is de  " + type + " uitvoering.";
     }
 
     //Interface methoden

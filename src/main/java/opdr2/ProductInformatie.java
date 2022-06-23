@@ -6,6 +6,10 @@ public class ProductInformatie {
     private double huurprijsPerDag;
     private double verzekeringPerDag;
 
+    public String uniekeInfo1;
+    public String uniekeInfo2;
+    public String beschrijving;
+
     public ProductInformatie (String naam, double huurprijsPerDag, double verzekeringPerDag) {
         this.naam = naam;
         this.huurprijsPerDag = huurprijsPerDag;

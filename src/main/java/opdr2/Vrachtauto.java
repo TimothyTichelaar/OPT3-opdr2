@@ -18,10 +18,10 @@ public class Vrachtauto extends Product{
     public Vrachtauto (int laadvermogen, int gewicht, ProductInformatie productInformatie) {
         this.laadvermogen = laadvermogen;
         this.gewicht = gewicht;
-        this.uniekeInfo1 = "Laadverogen";
-        this.uniekeInfo2 = "Gewicht";
-        this.beschrijving = "Een vrachtauto met " + laadvermogen + "kg laadvermogen. Het heeft een gewicht van " + gewicht + "kg.";
         this.productInformatie = productInformatie;
+        if(productInformatie != null){
+            setInformatieBeschrijving();
+        }
         this.verhuurInformatie = null;
     }
 
@@ -46,9 +46,17 @@ public class Vrachtauto extends Product{
     }
 
     private void setBeschrijving(){
-        this.beschrijving = "Een vrachtauto met " + this.laadvermogen + "kg laadvermogen. Het heeft een gewicht van " + this.gewicht + "kg.";
+        productInformatie.beschrijving = "Een vrachtauto met " + this.laadvermogen +
+                "kg laadvermogen. Het heeft een gewicht van " + this.gewicht + "kg.";
     }
 
+    @Override
+    public void setInformatieBeschrijving() {
+        productInformatie.uniekeInfo1 = "Laadverogen";
+        productInformatie.uniekeInfo2 = "Gewicht";
+        productInformatie.beschrijving = "Een vrachtauto met " + laadvermogen +
+                "kg laadvermogen. Het heeft een gewicht van " + gewicht + "kg.";
+    }
 
     //Interface methoden
     @Override

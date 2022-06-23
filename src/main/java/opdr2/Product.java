@@ -5,9 +5,7 @@ public abstract class Product {
     public ProductInformatie productInformatie;
     public VerhuurInformatie verhuurInformatie;
 
-    public String uniekeInfo1;
-    public String uniekeInfo2;
-    public String beschrijving;
+
     public boolean verhuurd;
 
     //-----Constructor-----
@@ -25,7 +23,7 @@ public abstract class Product {
         return verhuurd;
     }
 
-    public String getBeschrijving(){return this.beschrijving;}
+    public String getBeschrijving(){return productInformatie.beschrijving;}
 
     public String getNaam(){return productInformatie.getNaam();}
 
@@ -33,6 +31,7 @@ public abstract class Product {
 
     public void setProductInformatie(ProductInformatie productInformatie) {
         this.productInformatie = productInformatie;
+        setInformatieBeschrijving();
     }
 
     public void setVerhuurInformatie(VerhuurInformatie verhuurInformatie) {
@@ -47,6 +46,8 @@ public abstract class Product {
     public abstract void setInformatie1(String info1);
 
     public abstract void setInformatie2(String info2);
+
+    public abstract void setInformatieBeschrijving();
 
     //-----Overige methoden-----
     abstract double prijsPerDag(boolean verzekering);

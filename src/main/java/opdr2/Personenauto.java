@@ -18,10 +18,10 @@ public class Personenauto extends Product{
     public Personenauto (String merk, int gewicht, ProductInformatie productInformatie) {
         this.merk = merk;
         this.gewicht = gewicht;
-        this.uniekeInfo1 = "Merk";
-        this.uniekeInfo2 = "Gewicht";
-        this.beschrijving = "Een personenauto van het merk " + merk + ". Het heeft een gewicht van " + gewicht + "kg.";
         this.productInformatie = productInformatie;
+        if(productInformatie != null){
+            setInformatieBeschrijving();
+        }
         this.verhuurInformatie = null;
     }
 
@@ -46,9 +46,16 @@ public class Personenauto extends Product{
     }
 
     private void setBeschrijving(){
-        this.beschrijving = "Een personenauto van het merk " + this.merk + ". Het heeft een gewicht van " + this.gewicht + "kg.";
+        productInformatie.beschrijving = "Een personenauto van het merk " + this.merk +
+                ". Het heeft een gewicht van " + this.gewicht + "kg.";
     }
 
+    @Override
+    public void setInformatieBeschrijving() {
+        productInformatie.uniekeInfo1 = "Merk";
+        productInformatie.uniekeInfo2 = "Gewicht";
+        productInformatie.beschrijving = "Een personenauto van het merk " + merk + ". Het heeft een gewicht van " + gewicht + "kg.";
+    }
 
     //Interface methoden
     @Override
