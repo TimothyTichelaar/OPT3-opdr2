@@ -23,8 +23,9 @@ public class GereserveerdController extends ProductInfoController {
     @Override
     public void setProduct(Product prod){
         super.setProduct(prod);
-        medewerkerfield.setText(product.getVerhuur().getMedewerker().getNaam());
-        klant.setText(product.getVerhuur().getKlant().getNaam());
+        VerhuurInformatie verhuur = product.getVerhuurInformatie();
+        medewerkerfield.setText(verhuur.getMedewerker().getNaam());
+        klant.setText(verhuur.getKlant().getNaam());
     }
 
 

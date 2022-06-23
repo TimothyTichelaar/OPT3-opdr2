@@ -5,22 +5,19 @@ public abstract class Product {
     public ProductInformatie productInformatie;
     public VerhuurInformatie verhuurInformatie;
 
-
-    public boolean verhuurd;
-
     //-----Constructor-----
 
     //-----Get methoden-----
 
 
     public ProductInformatie getProductInformatie() {
-        return productInformatie;
+        return this.productInformatie;
     }
 
-    public VerhuurInformatie getVerhuur(){return this.verhuurInformatie;};
+    public VerhuurInformatie getVerhuurInformatie(){return this.verhuurInformatie;}
 
     public boolean getVerhuurd() {
-        return verhuurd;
+        return verhuurInformatie != null;
     }
 
     public String getBeschrijving(){return productInformatie.beschrijving;}
@@ -36,11 +33,6 @@ public abstract class Product {
 
     public void setVerhuurInformatie(VerhuurInformatie verhuurInformatie) {
         this.verhuurInformatie = verhuurInformatie;
-        setVerhuurd(verhuurInformatie != null);
-    }
-
-    public void setVerhuurd(boolean verhuurd) {
-        this.verhuurd = verhuurd;
     }
 
     public abstract void setInformatie1(String info1);

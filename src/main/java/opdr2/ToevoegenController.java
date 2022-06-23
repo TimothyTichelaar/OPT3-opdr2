@@ -37,8 +37,8 @@ public class ToevoegenController extends ProductInfoController{
         }if(productsoort == 2){
             product = ProductFactory.BOORMACHINE_FACTORY.maakProduct();
         }
-        info1Label.setText(product.uniekeInfo1);
-        info2Label.setText(product.uniekeInfo2);
+        info1Label.setText(product.getProductInformatie().uniekeInfo1);
+        info2Label.setText(product.getProductInformatie().uniekeInfo2);
     }
 
     @FXML

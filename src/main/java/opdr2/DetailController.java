@@ -47,7 +47,7 @@ public class DetailController extends ProductInfoController {
     private void setReserveren() throws IOException {
         String fxml = "reserveren.fxml";
         FXMLLoader loader = new FXMLLoader();
-        if(this.product.getVerhuur() != null){
+        if(this.product.getVerhuurInformatie() != null){
             fxml = "gereserveerd.fxml";
         }
         loader.setLocation(Objects.requireNonNull(getClass().getResource(fxml)));
