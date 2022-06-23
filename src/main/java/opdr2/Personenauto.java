@@ -25,13 +25,6 @@ public class Personenauto extends Product{
     }
 
     //Get methoden
-    public String getMerk () {
-        return this.merk;
-    }
-
-    public int getGewicht () {
-        return this.gewicht;
-    }
 
     //Set methoden
     public void setInformatie1(String merk) {
@@ -53,7 +46,7 @@ public class Personenauto extends Product{
     public void setInformatieBeschrijving() {
         productInformatie.setUniekeInfo1("Merk");
         productInformatie.setUniekeInfo2("Gewicht");
-        productInformatie.setBeschrijving("Een personenauto van het merk " + merk + ". Het heeft een gewicht van " + gewicht + "kg.");
+        setBeschrijving();
     }
 
     //Interface methoden
