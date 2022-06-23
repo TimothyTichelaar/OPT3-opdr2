@@ -44,7 +44,7 @@ public class Boormachine extends Product{
     public void setInformatieBeschrijving(){
         productInformatie.setUniekeInfo1("Merk");
         productInformatie.setUniekeInfo2("Type");
-        productInformatie.setBeschrijving("Een boormachine van het merk " + merk + ". Het is de  " + type + " uitvoering.");
+        this.setBeschrijving();
     }
 
     //Interface methoden

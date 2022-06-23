@@ -46,8 +46,7 @@ public class Vrachtauto extends Product{
     public void setInformatieBeschrijving() {
         this.productInformatie.setUniekeInfo1("Laadverogen");
         this.productInformatie.setUniekeInfo2("Gewicht");
-        this.productInformatie.setBeschrijving("Een vrachtauto met " + this.laadvermogen +
-                "kg laadvermogen. Het heeft een gewicht van " + this.gewicht + "kg.");
+        this.setBeschrijving();
     }
 
     //Interface methoden
