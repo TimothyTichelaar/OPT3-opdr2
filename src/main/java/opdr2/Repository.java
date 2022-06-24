@@ -33,7 +33,7 @@ public abstract class Repository {
         gewicht = 1700;
         ProductInformatie auto2 = new ProductInformatie(productNaam, huurprijs, verzekering);
         Product audi = new Personenauto("Audi", gewicht, auto2);
-        audi.setVerhuurInformatie(new VerhuurInformatie(PersonenOpslag.getMedewerkers().get(0), new Klant("Noah Albin"), true));
+        audi.setVerhuurInformatie(new VerhuurInformatie(PersonenOpslag.getMedewerkerLijst().get(0), new Klant("Noah Albin"), true));
         ProductOpslag.addProduct(audi);
 
         gewicht = 1300;
@@ -60,7 +60,7 @@ public abstract class Repository {
         gewicht = 2000;
         ProductInformatie vrachtauto3 = new ProductInformatie(productNaam, huurprijs, verzekering);
         Product newVrachtauto = new Vrachtauto(laadvermogen, gewicht, vrachtauto3);
-        newVrachtauto.setVerhuurInformatie(new VerhuurInformatie(PersonenOpslag.getMedewerkers().get(1), new Klant("Jantje"), false));
+        newVrachtauto.setVerhuurInformatie(new VerhuurInformatie(PersonenOpslag.getMedewerkerLijst().get(1), new Klant("Jantje"), false));
         ProductOpslag.addProduct(newVrachtauto);
     }
 
@@ -77,7 +77,7 @@ public abstract class Repository {
 
         ProductInformatie boormachine3 = new ProductInformatie(productNaam, huurprijs, verzekering);
         Boormachine newBoormachine = new Boormachine("Bosch", "Nitro", boormachine3);
-        newBoormachine.setVerhuurInformatie(new VerhuurInformatie(PersonenOpslag.getMedewerkers().get(2), new Klant("Hans"), true));
+        newBoormachine.setVerhuurInformatie(new VerhuurInformatie(PersonenOpslag.getMedewerkerLijst().get(2), new Klant("Hans"), true));
         ProductOpslag.addProduct(newBoormachine);
 
     }
