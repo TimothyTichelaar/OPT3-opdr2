@@ -6,19 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Observable {
-    private static final List<SceneController> observers = new ArrayList<>();
+    private static final List<Observer> observers = new ArrayList<>();
 
-    public static void addObserver(SceneController controller){
-        observers.add(controller);
+    public static void addObserver(Observer observer){
+        observers.add(observer);
     }
 
-    public static void deleteObserver(SceneController controller){
-        observers.remove(controller);
+    public static void deleteObserver(Observer observer){
+        observers.remove(observer);
     }
 
     public static void update(){
-        for(int i = 0; i < observers.size(); i++){
-            observers.get(i).update();
+        for(Observer observer: observers){
+            observer.update();
         }
     }
 }
