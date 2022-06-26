@@ -30,13 +30,7 @@ public class ToevoegenController extends ProductInfoController{
 
     private void itemAanmaken () {
         //System.out.println(productsoort);
-        if(productsoort == 0){
-            product = ProductFactory.PERSONENAUTO_FACTORY.maakProduct();
-        }if(productsoort == 1){
-            product = ProductFactory.VRACHTAUTO_FACTORY.maakProduct();
-        }if(productsoort == 2){
-            product = ProductFactory.BOORMACHINE_FACTORY.maakProduct();
-        }
+        product = ProductFactory.FACTORY_LIST.get(productsoort).maakProduct();
         info1Label.setText(product.productInformatie.getUniekeInfo1());
         info2Label.setText(product.productInformatie.getUniekeInfo2());
     }

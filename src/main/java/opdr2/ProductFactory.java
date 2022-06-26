@@ -1,9 +1,14 @@
 package opdr2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public abstract class ProductFactory {
-    public static final PersonenautoFactory PERSONENAUTO_FACTORY = new PersonenautoFactory();
-    public static final VrachtautoFactory VRACHTAUTO_FACTORY = new VrachtautoFactory();
-    public static final BoormachineFactory BOORMACHINE_FACTORY = new BoormachineFactory();
+
+    public static final List<ProductFactory> FACTORY_LIST = new ArrayList<>(Arrays.asList(
+            new PersonenautoFactory(), new VrachtautoFactory(), new BoormachineFactory()
+    ));
 
     public abstract Product maakProduct ();
 }

@@ -27,22 +27,24 @@ public class BeheerController extends SceneController {
 
     public void clickItem(MouseEvent event) {
         int product = producten.getSelectionModel().getSelectedIndex();
-        String stageName = "toevoegen";
-        Parent root;
-        FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(OverzichtController.class.getResource(stageName + "-view.fxml")));
-        try {
-            root = loader.load();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if(product != -1) {
+            String stageName = "toevoegen";
+            Parent root;
+            FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(OverzichtController.class.getResource(stageName + "-view.fxml")));
+            try {
+                root = loader.load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            ToevoegenController controller = loader.getController();
+            controller.setMedewerker(medewerker);
+            controller.setProductsoort(product);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            String scherm = stageName.substring(0, 1).toUpperCase() + stageName.substring(1);
+            stage.setTitle("Rent-a-Thing // " + scherm + "        " + medewerker.getNaam());
+            stage.setScene(scene);
+            stage.show();
         }
-        ToevoegenController controller = loader.getController();
-        controller.setMedewerker(medewerker);
-        controller.setProductsoort(product);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        String scherm = stageName.substring(0,1).toUpperCase() + stageName.substring(1);
-        stage.setTitle("Rent-a-Thing // " + scherm + "        " +  medewerker.getNaam());
-        stage.setScene(scene);
-        stage.show();
     }
 }
