@@ -10,7 +10,6 @@ import java.io.IOException;
 
 public class MenuApplication extends Stage {
 
-    private Pane rootPane;
     public MenuApplication (Medewerker medewerker) {
         FXMLLoader parent = new FXMLLoader(MenuApplication.class.getResource("menu-view.fxml"));
         Scene scene = null;
@@ -30,12 +29,5 @@ public class MenuApplication extends Stage {
         stage.show();
     }
 
-    public void update () {
 
-        this.rootPane.getChildren ().clear ();
-        VBox vBox = new VBox ();
-        this.rootPane.getChildren ().add (vBox);
-
-
-    }
 }

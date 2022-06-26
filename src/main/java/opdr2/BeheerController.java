@@ -38,7 +38,7 @@ public class BeheerController extends SceneController {
             }
             ToevoegenController controller = loader.getController();
             controller.setMedewerker(medewerker);
-            controller.setProductsoort(product);
+            controller.itemAanmaken(product);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             String scherm = stageName.substring(0, 1).toUpperCase() + stageName.substring(1);

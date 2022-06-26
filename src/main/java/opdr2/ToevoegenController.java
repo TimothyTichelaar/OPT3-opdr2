@@ -6,7 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class ToevoegenController extends ProductInfoController{
-    private int productsoort;
 
     @FXML Label info1Label;
 
@@ -22,17 +21,11 @@ public class ToevoegenController extends ProductInfoController{
 
     @FXML TextField verzekeringField;
 
-    public void setProductsoort(int productsoort){
-        this.productsoort = productsoort;
-        itemAanmaken();
-        productField.setText(product.getNaam());
-    }
-
-    private void itemAanmaken () {
-        //System.out.println(productsoort);
+    public void itemAanmaken (int productsoort) {
         product = ProductFactory.FACTORY_LIST.get(productsoort).maakProduct();
         info1Label.setText(product.productInformatie.getUniekeInfo1());
         info2Label.setText(product.productInformatie.getUniekeInfo2());
+        productField.setText(product.getNaam());
     }
 
     @FXML

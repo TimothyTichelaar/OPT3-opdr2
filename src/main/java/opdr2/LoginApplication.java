@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class LoginApplication extends Application{
-    //public final List<Menu> menus;
-
 
     @Override
     public void start(Stage stage) throws Exception {

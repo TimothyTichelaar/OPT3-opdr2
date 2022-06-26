@@ -12,8 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoginController extends SceneController {
-    @FXML private Button menu;
-
     @FXML private TextField code;
 
     @FXML private TextField wachtwoord;
@@ -27,7 +25,6 @@ public class LoginController extends SceneController {
         Medewerker medewerker = PersonenOpslag.getMedewerker(inlogCode);
         if(PersonenOpslag.checkInlog(inlogCode, wachtwoord.getText()) && !SceneController.checkIngelogd(medewerker)){
             SceneController.ingelogd.add(medewerker);
-            Stage stage = new Stage();
             new MenuApplication (medewerker);
             foutmeldingLabel.setVisible(false);
         }else{
