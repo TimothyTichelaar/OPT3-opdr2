@@ -18,8 +18,6 @@ public abstract class SceneController implements EventHandler<ActionEvent>, Obse
 
     public Medewerker medewerker;
 
-
-
     public void setMedewerker(Medewerker newMedewerker){this.medewerker = newMedewerker;}
 
     public static boolean checkIngelogd(Medewerker medewerker){

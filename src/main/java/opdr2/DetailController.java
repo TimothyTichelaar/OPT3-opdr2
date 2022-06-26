@@ -34,12 +34,6 @@ public class DetailController extends ProductInfoController {
         }
     }
 
-//    public void gerbuikProductInformatie() throws IOException {
-//        setTitel();
-//        setBeschrijving();
-//        setReserveren();
-//    }
-
     private void setTitel(){this.titel.setText(this.product.productInformatie.getNaam());}
 
     private void setBeschrijving(){this.beschrijving.setText(this.product.getBeschrijving());}

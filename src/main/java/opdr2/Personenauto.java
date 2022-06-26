@@ -24,8 +24,6 @@ public class Personenauto extends Product{
         }
     }
 
-    //Get methoden
-
     //Set methoden
     public void setInformatie1(String merk) {
         this.merk = merk;

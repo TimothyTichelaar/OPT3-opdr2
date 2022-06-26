@@ -57,6 +57,4 @@ public class ToevoegenController extends ProductInfoController{
         Observable.update();
         super.handle(event);
     }
-
-
 }
